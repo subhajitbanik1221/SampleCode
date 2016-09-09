@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<script src="angularLib.js"></script>
+	</head>
+	<body>
+		<h1 id="header">Contact Form</h1> 
+		<div  ng-app="ang" ng-controller="ctrl">
+			<div id="formField" >
+				<form>
+					<table border="0" cellpadding="8" cellspacing="0" width="100%">
+					<!--First name-->
+						<tr>
+							<td style="background:#ececfb">First Name:</td>
+							<td><input type="text" ng-model="fname" placeholder="Enter first name" ></td>
+						</tr>
+					<!--Last name-->
+						<tr>
+							<td style="background:#ececfb">Last Name:</td>
+							<td><input type="text" ng-model="lname" placeholder="Enter Last name"  id="lname"></td>
+						</tr>
+					<!--Email Id-->
+						<tr>
+							<td style="background:#ececfb">Email:</td>
+							<td><input type="text" ng-model="email" placeholder="Enter your Email" id="email"></td>
+						</tr>
+					<!--Enter Mobile no-->
+						<tr>
+							<td style="background:#ececfb">Mobile no:</td>
+							<td><input type="tel" ng-model="mobile" placeholder="Enter your mobile no"  id="mobile"></td>
+						</tr>
+					<!--Enter your fevorite color-->	
+						<tr>
+							<td style="background:#ececfb">Favorite color:</td>
+							<td><input type="color" value=""  ng-model="color" id="color"></td>
+						</tr>
+					<!--Enter date of birth-->
+						<tr>
+							<td style="background:#ececfb">Date Of Birth:</td>
+							<td><input type="date" ng-model="dob"  id="dob"></td>
+						</tr>
+					<!--Enter Gender-->
+						<tr>
+							<td style="background:#ececfb">Gender:</td>
+							<td>
+								Male <input ng-model="sex" type="radio" value="Male">
+								Female <input ng-model="sex" type="radio"  value="Female">
+							</td>
+						</tr>
+					<!--Enter Your hobbies-->
+						<tr>
+							<td style="background:#ececfb">Hobbies:</td>
+							<td>
+								Cricket <input ng-model="hobby1"  type="checkbox" value="Cricket" name="crik" id="crik">
+								Carroms <input ng-model="hobby2"  type="checkbox" value="Carroms" name="carm" id="carm">
+								Chess <input ng-model="hobby3"  type="checkbox" value="Chess" name="chess" id="chess">
+							</td>
+						</tr>
+					<!--Your major-->	
+						<tr>
+							<td style="background:#ececfb">Major:</td>
+							<td>
+								<select ng-model="major" >
+									<option value="">Select Department</option>
+									<option>Electrical</option>
+									<option>Mechanical</option>
+									<option>Computer Science</option>
+									<option>Control and Automation</option>
+									<option>Chemical</option>
+									<option>Maths</option>
+								</select>
+							</td>
+						</tr>
+					<!--Select Country-->
+						<tr>
+							<td style="background:#ececfb">Select Country:</td>
+							<td>
+								<select ng-options="country.name for country in item" ng-model="countries">
+									<option value="">Select Country</option>
+								</select>
+							</td>
+						</tr>
+					<!--Select States-->
+						<tr>
+							<td style="background:#ececfb">Select State:</td>
+							<td>
+								<select ng-options="state.name for state in countries.state"  ng-model="states">
+									<option value="">Select States</option>
+								</select>
+							</td>
+						</tr>
+					<!--Select City-->
+						<tr>
+							<td style="background:#ececfb">Select City:</td>
+							<td>
+								<select  ng-options="city.name for city in states.city" ng-model="cities">
+									<option value="">Select City</option>
+								</select>
+							</td>
+						</tr>
+					<!--Submit button-->
+						<tr>
+							<td style="background:#ececfb"></td>
+							<td><input type="submit" value="Submit"></td>
+						</tr>
+						
+					</table>
+				</form>
+			</div>
+
+			<div id="filledForm">
+				<table border="1" cellspacing="0" cellpadding="10" width="100%">
+					<tr>
+						<td colspan="2"><h1 id="form-header"><span>{{fname}}</span><span>  {{lname}}</span></h1></td>
+					</tr>
+			
+					<tr>
+						<td  style="background:#ececfb" colspan="2"><h3>Contact Info</h3></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><span ng-bind="email">{{email}}</span></td>
+					</tr>
+
+					<tr>
+						<td>Phone Number</td>
+						<td><span>{{mobile}}</span></td>
+					</tr>
+					
+					<tr>
+						<td>Address</td>
+						<td><span>{{countries.name}}-{{states.name}}-{{cities.name}}</span></td>
+					</tr>
+
+					<tr>
+						<td style="background:#ececfb" colspan="2"><h3>Personal Info</h3></td>
+					</tr>
+
+					<tr>
+						<td>Date of birth</td>
+						<td><span>{{dob}}</span></td>
+					</tr>
+
+					<tr>
+						<td>Gender</td>
+						<td><span>{{sex}}</span></td>
+					</tr>
+
+					<tr>
+						<td>Hobbies</td>
+						<td>
+							<span ng-show="hobby1">Cricket,</span><span ng-show="hobby2">Carroms,</span><span ng-show="hobby3">Chess</span>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Favorite color</td>
+						<td><span>{{color}}</span></td>
+					</tr>
+
+					<tr>
+						<td style="background:#ececfb" colspan="2"><h3>Education Info</h3></td>
+					</tr>
+
+					<tr>
+						<td>Majoring In</td>
+						<td><span>{{major}}</span></td>
+					</tr>
+					<tr>
+						<td style="background:#aaaaaa" colspan="2"><input style="padding:7px 10px" ng-click="printDiv()" type="submit" id="print" value="      Print      "><input style="padding:7px 10px" type="submit" ng-click="rfresh()" value="    Refresh    "></td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+		<script>
+			var angular=angular.module('ang',[]);
+			angular.controller('ctrl',function($scope){
+				$scope.item=[
+								
+							{	name:"India",
+								state:[
+										{name:'West Bengal',
+										city:[
+											{name:'Kolkata'},
+											{name:'Durgapur'},
+											{name:'Asansol'},
+											{name:'Siliguri'}
+											]
+										},
+										{name:'Uttar Pradesh',
+											city:[
+											{name:'Locknow'},
+											{name:'Agra'},
+											{name:'Varanasi'}
+											]
+										},
+										{name:'Madhya Pradesh',
+											city:[
+											{name:'Bhopal'},
+											{name:'Indore'},
+											{name:'Jabalpur'}
+											]
+										},
+										{name:'Gujrat',
+											city:[
+											{name:'Surat'},
+											{name:'Rajkot'},
+											{name:'Bhuj'}
+											]
+										}
+									]
+							},
+							{
+								name:"USA",
+								state:[
+										{name:'Kansas',
+										city:[
+											{name:'Wichita'},
+											{name:'Tulsa'},
+											{name:'Eldorado'},
+											{name:'Huchinson'}
+											]
+										},
+										{name:'California',
+											city:[
+											{name:'Los Angeles'},
+											{name:'San Diego'},
+											{name:'San Jose'}
+											]
+										},
+										{name:'Missouri',
+											city:[
+											{name:'Kansas City'},
+											{name:'Joplin'},
+											{name:'Saint Joseph'}
+											]
+										},
+										{name:'Texas',
+											city:[
+											{name:'Dallas'},
+											{name:'Austin'},
+											{name:'Huston'}
+											]
+										}
+									]
+									
+							},
+							{
+								name:"China",
+								state:[
+										{name:'Tibet'},
+										{name:'Inner Mongolia'},
+										{name:'Sichuan'}
+									]
+							},
+							{
+								name:"Australia",
+								state:[
+										{name:'Queensland'},
+										{name:'Victoria'},
+										{name:'South Australia'},
+										{name:'Western Australia'}
+									]
+							}];
+				
+				$scope.printDiv=function(){
+					var originalContents=document.body.innerHTML;
+					document.body.innerHTML=document.getElementById('filledForm').innerHTML;
+					window.print();
+					document.body.innerHTML = originalContents;
+				};
+				$scope.rfresh=function(){
+					location.reload();	
+				};
+				
+			});
+		</script>
+	</body>
+</html>

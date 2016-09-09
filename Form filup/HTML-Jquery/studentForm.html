@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="jquery.js"></script>
+		<script src="myscript.js"></script>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
+	<body>
+		<h1 id="header">Contact Form</h1> 
+		<div id="container">
+			<div id="formField">
+				<form>
+					<table border="0" cellpadding="8" cellspacing="0" width="100%">
+					<!--First name-->
+						<tr>
+							<td style="background:#ececfb">First Name:</td>
+							<td><input type="text" placeholder="Enter first name"  id="fname" required pattern="[a-z]{5,}" title="please enter only characters and should min 5"></td>
+						</tr>
+					<!--Last name-->
+						<tr>
+							<td style="background:#ececfb">Last Name:</td>
+							<td><input type="text" placeholder="Enter Last name"  id="lname" required pattern="[a-z]{5,}" title="please enter only characters and should min 5"></td>
+						</tr>
+					<!--Email Id-->
+						<tr>
+							<td style="background:#ececfb">Email:</td>
+							<td><input type="email" placeholder="Enter your Email" id="email" required></td>
+						</tr>
+					<!--Enter Mobile no-->
+						<tr>
+							<td style="background:#ececfb">Mobile no:</td>
+							<td><input type="tel" placeholder="Enter your mobile no"  id="mobile" required></td>
+						</tr>
+					<!--Enter your fevorite color-->	
+						<tr>
+							<td style="background:#ececfb">Favorite color:</td>
+							<td><input type="color"  value="" id="color" required></td>
+						</tr>
+					<!--Enter date of birth-->
+						<tr>
+							<td style="background:#ececfb">Date Of Birth:</td>
+							<td><input type="date"  id="dob" required></td>
+						</tr>
+					<!--Enter Gender-->
+						<tr>
+							<td style="background:#ececfb">Gender:</td>
+							<td>
+								Male <input type="radio" value="male" name="gender" id="genderm">
+								Female <input type="radio"  value="female" name="gender" id="genderf">
+							</td>
+						</tr>
+					<!--Enter Your hobbies-->
+						<tr>
+							<td style="background:#ececfb">Hobbies:</td>
+							<td>
+								Cricket <input  type="checkbox" value="Cricket" name="crik" id="crik">
+								Carroms <input  type="checkbox" value="Carroms" name="carm" id="carm">
+								Chess <input  type="checkbox" value="Chess" name="chess" id="chess">
+							</td>
+						</tr>
+					<!--Your major-->	
+						<tr>
+							<td style="background:#ececfb"><label for="">Major:</label></td>
+							<td>
+								<select  id="major" required>
+									<option>Select value</option>
+									<option>Electrical</option>
+									<option>Mechanical</option>
+									<option>Computer Science</option>
+									<option>Control and Automation</option>
+									<option>Chemical</option>
+									<option>Maths</option>
+								</select>
+							</td>
+						</tr>
+					<!--Select Country-->
+						<tr>
+							<td style="background:#ececfb">Select Country:</td>
+							<td>
+								<select id="countries">
+									
+								</select>
+							</td>
+						</tr>
+					<!--Select States-->
+						<tr>
+							<td style="background:#ececfb">Select State:</td>
+							<td>
+								<select  id="states">
+									<option>Select States</option>
+								</select>
+							</td>
+						</tr>
+					<!--Select City-->
+						<tr>
+							<td style="background:#ececfb">Select City:</td>
+							<td>
+								<select  id="cities">
+									<option>Select City</option>
+								</select>
+							</td>
+						</tr>
+					<!--Submit button-->
+						<tr>
+							<td style="background:#ececfb"></td>
+							<td><input type="submit" value="Submit"></td>
+						</tr>
+						
+					</table>
+				</form>
+			</div>
+
+			<div id="filledForm">
+				<table border="1" cellspacing="0" cellpadding="10" width="100%">
+					<tr>
+						<td colspan="2"><h1 id="form-header"><span id="fn"></span><span id="ln"></span></h1></td>
+					</tr>
+			
+					<tr>
+						<td  style="background:#ececfb" colspan="2"><h3>Contact Info</h3></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><span id="em"></span></td>
+					</tr>
+
+					<tr>
+						<td>Phone Number</td>
+						<td><span id="pn"></span></td>
+					</tr>
+					
+					<tr>
+						<td>Address</td>
+						<td><span id="ad"></span></td>
+					</tr>
+
+					<tr>
+						<td style="background:#ececfb" colspan="2"><h3>Personal Info</h3></td>
+					</tr>
+
+					<tr>
+						<td>Date of birth</td>
+						<td><span id="bd"></span></td>
+					</tr>
+
+					<tr>
+						<td>Gender</td>
+						<td><span id="sx"></span></td>
+					</tr>
+
+					<tr>
+						<td>Hobies</td>
+						<td><span id="hby"></span></td>
+					</tr>
+
+					<tr>
+						<td>Favorite color</td>
+						<td><span id="cl"></span></td>
+					</tr>
+
+					<tr>
+						<td style="background:#ececfb" colspan="2"><h3>Education Info</h3></td>
+					</tr>
+
+					<tr>
+						<td>Majoring In</td>
+						<td><span id="mj"></span></td>
+					</tr>
+					<tr>
+						<td style="background:#aaaaaa" colspan="2"><input style="padding:7px 10px" type="submit" id="print" value="      Print      "><input style="padding:7px 10px" type="submit" id="rfresh" value="    Refresh    "></td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

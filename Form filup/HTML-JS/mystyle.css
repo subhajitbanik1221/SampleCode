@@ -1,0 +1,45 @@
+*{
+    margin:0px;
+	font-family:Gill Sans Extrabold, sans-serif;
+}
+
+#header{
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    margin-bottom: 30px;
+	background:#20202f;
+	color:#ececfb;
+
+}
+#container{
+	width:100%;
+	height:auto;
+	margin:0px auto;
+}
+#form-header{
+    text-align: center;
+    color:#434343;
+
+}
+#formField{
+    height: auto;
+    width:30%;
+    border:2px solid #434343;
+	border-radius:5px;
+    float:left;
+    margin-left: 13%;
+	padding:10px;
+}
+
+
+
+#filledForm{
+    height:auto;
+    width:37%;
+    border:5px solid #434343;
+    display:inline-block;
+    margin-left: 50px;
+    padding:20px;
+	border-radius:5px;
+}

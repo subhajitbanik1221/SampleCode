@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Subhajit-Portfolio</title>
+		<link href="boilerplate.css" rel="stylesheet" type="text/css">
+		<link href="mystyle.css" rel="stylesheet" type="text/css">
+		<script src="respond.min.js"></script>
+	</head>
+	<!--
+	Construction Plan of markup::::::
+													BODY
+					_________________________________|_____________________________________
+				   |						|						|					   |
+			header-container		introduction-design			container			contact-footerHolder
+				   |						|			____________|____________			|
+			header-elements				about-me	   |						 |			|
+													mouse-					popup-container	|
+													parallax								|
+													-effect							________|________
+											__________|__________				   |				 |
+										   |					|				contact-me			footer
+										scene				side-menu	_______|________		   |
+																		   |				|		footer-content
+																		profile-pic-effect	contact_me_form		|
+																										________|________
+																									   |		|		 |
+																									 col1	   col2		col3  
+	-->
+<body>
+	<!-- PAGE-1 ################# Contaning parallax efeect with fixed background: called header-container #############-->
+		<div id="header-container">
+			<div id="header-elements" >
+				<div id="moving-moon"></div>
+				<div id="moving-mars"></div>
+				<div id="moving-star"></div>
+				<div id="moving-earth"></div>
+				<div id="desktop-icon"></div>
+				<div id="logo-background"></div>
+				<div id="logo"><h1>SUBHAJIT BANIK</h1><h3>UI/Front End Developer</h3></div>
+			</div>
+			<div id="mouse-icon"></div>
+			<!-- End of header-elements -->
+		</div>
+	<!-- PAGE 1 ################# End of First page  #############-->
+	
+	
+	<!-- PAGE-2 ################# Contaning about me section: called about-me #############-->	
+		<div id="introduction-design">
+			<div id="about-me"><h1>About Me...</h1><p>Hello. My name is Subhajit Banik. I am a front end developer with 8 years commercial experience in front-end development to produce high-quality websites and exceptional user experience. I love to work with inspiring and creative agencies and people. For more info explore my portfolio.</p>
+			</div>
+			<!-- End of about-me-->
+			
+			<div id="laptop-pic">
+			</div>
+		</div>
+	<!-- PAGE-2 ################# End of second page #############-->		
+
+
+
+<!-- PAGE-3 ################## Containing bubble effect with mouse movement#############-->		
+		<div class="container">
+			<!-- Start of mouse-parallax-effect, (sub div:Scene,side-menu )-->
+			<div id="mouse-parallax-effect">
+				<div id="scene" class="scene">
+			
+					<div id="bubble1" class="layer" data-depth="0.30"><p style="text-align:center; padding-top:45px;color:#ffff73;font-weight:bold">ANGULAR JS,<br/>React JS,<br/>Backbone Js</p></div>
+					<div id="bubble2" class="layer" data-depth="0.25"><p style="text-align:center; padding-top:50px;color:#ffff73;font-weight:bold">AJAX,<br/>JSON,<br/>Bootstrap</p></div>
+					<div id="bubble3" class="layer" data-depth="0.50"></div>
+					<div id="bubble4" class="layer" data-depth="0.50"><p style="text-align:center; padding-top:35px;color:#ffff73;font-weight:bold">SQL Server,<br/>MySQL,<br/>Oracle</p></div>
+					<div id="bubble5" class="layer" data-depth="0.50"><p style="text-align:center; padding-top:2px;color:#ffff73;font-weight:bold">C,<br/>C++,<br/>JAVA</p></div>
+					<div id="bubble6" class="layer" data-depth="0.50"><p style="text-align:center; padding-top:30px;color:#ffff73;font-weight:bold">FireBug,<br/>Chrome Debugger</p></div>
+					<div id="bubble7" class="layer" data-depth="0.20"><p style="text-align:center; padding-top:55px;color:#ffff73;font-weight:bold">Responsive Web Design,<br/>Adaptive Web Design</p></div>
+					<div id="bubble8" class="layer" data-depth="0.60"><p style="text-align:center; padding-top:50px;color:#ffff73;font-weight:bold">Sublime,<br/>Notepad++,<br/>Eclipse,<br/>Web Strom,<br/>Brackets</p></div>
+					<div id="bubble9" class="layer" data-depth="1.00"><p style="text-align:center; padding-top:60px;color:#ffff73;font-weight:bold">HTML-5,<br/>CSS-3,<br/>JavaScript,<br/>Jquery</p></div>
+					
+				</div>
+				
+				<div id="wrapper">
+					<div class="big-div"></div>
+					<div class="big-div1">
+						<div class="sideheader"><h1>Services</h1></div>
+						<div class="srv1">
+							<div class="srv1-img"><img src="image/design.png"></div>
+							<div class="srv1-txt">
+								<h4>Design what you want.</h4>
+								<p>I like to keep it simple. My goals are to focus on typography, content and conveying the message that you want to send.</p>
+							</div>
+						</div>
+						<div class="srv2">
+							<div class="srv2-img"><img src="image/devlop.png"></div>
+							<div class="srv2-txt">
+								<h4>Develop what you need.</h4>
+								<p>I'm a developer, so I know how to create your website to run across devices using the latest technologies available.</p>
+							</div>
+						</div>
+						<div class="srv3">
+							<div class="srv3-img"><img src="image/responsive.png"></div>
+							<div class="srv3-txt">
+								<h4>Response with your device</h4>
+								<p>I can develop webpage which can recognize your device and perform according to your device.</p>
+							</div>
+						</div>
+					</div>
+					<div class="big-div2">
+						<div class="sideheader"><h1>Summary</h1></div>
+						<div class="summery">
+							<img src="image/summery.png"></img>
+							<div class="summery-text">
+								<p>> 8 years of strong experience as User Interface/Front End Developer in developing web applications using HTML, CSS, JavaScript, AngularJS, DOM, JQUERY and Ajax.</p>
+								<p><br/>> Expertise in Client Scripting language and server side scripting languages like HTML5, CSS3, JavaScript, JQUERY, JSON, Bootstrap, Backbone/Angular, Twitter Bootstrap, GRUNT.</p>
+								<p><br/>> Over 3 yrs. of experience with AngularJS,React JS, Require JS, Object Oriented JavaScript.</p>
+								<p><br/>> Working knowledge of Web protocols and standards (HTTP HTML5/XHTML/XHTML-MP, CSS3, Web Forms, XML, XML parsers).</p>
+								<p><br/>> Extensive experience on implementing the AJAX features using JavaScript and JQUERY.</p>
+								<p><br/>> Experience with Backbone JavaScript library with a Restful JSON interface.</p>
+								<p><br/>> Experienced in working in AGILE based development environment and participating in Scrum sessions.</p>
+								<p><br/>> Experience with User Acceptance Testing (UAT) and Accessibility Testing.</p>
+								<p><br/>> Experience in using version controls like SVN, GitHub.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<!-- Start of side-menu -->
+				<div id="side-menu">
+					<video autoplay loop>
+						  <source src="video/slider.mp4"></source>
+						  <source src="video/slider.ogv"></source>
+						  <source src="video/slider.webm"></source>
+					</video>
+					<hr/>
+					<ul>
+						<li id="intro">Skills</li>
+						<li id="wk">Services</li>
+						<li id="ed">Summary</li>
+					</ul>
+					<hr/>
+				</div>
+				<!-- End of side-menu -->
+			</div> 
+
+		</div>
+<!-- PAGE-3 ################## End of container #############-->		
+	
+
+
+<!-- PAGE-4 ################ Start of contact me page+Footer section ############-->	
+		<div id="contact-footerHolder">	
+			<div id="contact-me">
+				<h1>Contact Me</h1>
+				
+				<!-- Profile pic parallax effect -->
+				<div id="profile-pic-effect">
+				</div>
+				<!-- Profile pic parallax effect -->
+			</div>
+
+			<!-- ##################### Start of footer ############-->
+			<div id="footer">
+				<div id="footer-content">
+					<div class="col1">
+						<img src="image/phone.png">
+						<h5>+1 316 302 5224</h5>
+					</div>
+					<div class="col2">
+						<img src="image/email.png">
+					  <h5>baniksubhajit1221@gmail.com</h5>
+					</div>
+					<div class="col3">
+						<h5>Follow me</h5>
+						<img src="image/facebook.png">
+						<img src="image/linkedin.png">
+						<img src="image/gplus.png">
+					</div>
+				</div>
+			</div>
+			<!-- ##################### End of footer ############-->
+		</div>
+<!--PAGE-4 ##################### End of contact me page+Footer section ############-->		
+
+    <!-- Scripts -->
+		<script src="jquery.js"></script>
+		<script src="myscript.js"></script>
+		<script src="parallax.js"></script>
+		<script>
+			var scene = document.getElementById('scene');
+			var parallax = new Parallax(scene);
+		</script>
+	<!-- Scripts -->
+</body>
+</html>

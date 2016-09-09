@@ -1,0 +1,16 @@
+{
+	"data":{"coord":
+			{"lon":-87.65,"lat":41.85},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":300.18,"pressure":1017,"humidity":57,"temp_min":298.15,"temp_max":302.15},"visibility":16093,"wind":{"speed":2.1,"deg":40},"clouds":{"all":1},"dt":1470185585,"sys":{"type":1,"id":966,"message":0.0468,"country":"US","sunrise":1470221221,"sunset":1470272746},"id":4887398,"name":"Chicago","cod":200},
+	"status":200,
+				"config":{"method":"GET","transformRequest":[null],"transformResponse":[null],"url":"http://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=d9cfcc35d9c2684d5fbbdb413adecbc0","headers":{"Accept":"application/json, text/plain, */*"}},
+			"statusText":"OK"} 
+			
+			Description:weather.data.coord.weather.description
+			Temp:weather.data.coord.main.temp
+			Pressure:weather.data.coord.main.pressure
+			Humidity:weather.data.coord.main.humidity
+			Min Temp:weather.data.coord.main.temp_min
+			Max Temp:weather.data.coord.main.temp_max
+			Visibility:weather.data.coord.visibility
+			Sunrise:weather.data.coord.sys.sunrise
+			Sunset:weather.data.coord.sys.sunset
